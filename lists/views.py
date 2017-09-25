@@ -13,6 +13,6 @@ def view_list(request):
 
 
 def new_list(request):
-    _list = List.objects.create()
+    list_ = List.objects.create()
     Item.objects.create(text=request.POST['item_text'])
     return redirect('/lists/the-only-list-in-the-world/')
